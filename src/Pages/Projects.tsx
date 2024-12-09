@@ -8,12 +8,21 @@ const Cuteness: React.FC = () => {
   const homeButton = () => {
     navigate('/');
   };
+  const textSwapButton = () => {
+    navigate('/TextSwap');
+  };
+  // const textSwapButton = () => {
+  //   navigate('/TextSwap');
+  // };
+  // const textSwapButton = () => {
+  //   navigate('/TextSwap');
+  // };
   return (
     <div>
       <h1 className="welcome-title">Welcome to My Projects</h1>
       <Button text="Back to Welcome" onClick={homeButton} className="homeButton"/>
       <div className='projects-container'>
-        <div className='project'>
+        <div className='project' onClick={textSwapButton}>
           <h2 className='project-title'>Project 1</h2>
           <p className='project-description'>This is a project description.</p>
         </div>
