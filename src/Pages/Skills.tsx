@@ -5,10 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../Components/Tools/Button';
 
 const Skills: React.FC = () => {
-  const navigate = useNavigate();
-  const ButtonBack = () => {
-    navigate('/');
-  };
   const skills = [
     'JavaScript',
     'React',
@@ -29,7 +25,6 @@ const Skills: React.FC = () => {
           <li key={index} className="skill-item">{skill}</li>
         ))}
       </ul>
-      <Button text="Click Me For Skills!!" onClick={ButtonBack} />
     </div>
   );
 };
