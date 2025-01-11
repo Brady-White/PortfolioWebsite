@@ -1,30 +1,24 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {useState} from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import '../../Styling/Header.css';
-import logo from '../Images/Logo.png';
+import darkLogo from '../Images/darkLogo.png';
+import lightLogo from '../Images/lightLogo.png';
 
 const Header: React.FC = () => {
+  const location = useLocation();
+
   return (
-    <header className="header">
-      <nav className="nav-bar">
-        <ul className='home-link'>
-        <li>
-            <Link to="/" className="nav-link">
-              <img src={logo} className="nav-logo"/>
-            </Link>
-          </li>
-        </ul>
-        <ul className="nav-links">
-          
-          <li>
-            <Link to="/Skills" className="nav-link">Skills</Link>
-          </li>
-          <li>
-            <Link to="/Projects" className="nav-link">Projects</Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div className="Header">
+      <header className="header">
+        <nav className="nav-bar">
+          <ul className="nav-links">
+            <li><Link to="/Skills" className={`nav-link ${location.pathname === '/Skills' ? 'active' : ''}`}>Skills</Link></li>
+            <li><Link to="/Projects" className={`nav-link ${location.pathname === '/Projects' ? 'active' : ''}`}>Projects</Link></li>
+            <li><Link to="/About" className={`nav-link ${location.pathname === '/About' ? 'active' : ''}`}>About</Link></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
   );
 };
 

@@ -1,7 +1,4 @@
-.header {
-    background-color: #333; /* Dark background */
-    color: white;
-  }
+
   
   .nav-bar {
     display: flex;
@@ -14,26 +11,27 @@
     display: flex;
     list-style: none;
     gap: 20px;
-    margin-left: 5px;
-    margin-top: 20px;
-  }
-  .home-link{
-    list-style: none;
-    
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: 20px;
   }
   
   .nav-link {
-    color: white;
+    color: var(--primarytextColor);
+    list-style: none;
     text-decoration: none;
     font-size: 1.2em;
-    transition: color 0.3s ease;
+    transition: color 250ms ease-in-out;
   }
   
   .nav-link:hover {
-    color: #ff6347; /* Highlight color on hover */
+    color: blue; /* Highlight color on hover */
   }
 
   .nav-logo{
-    max-height: 30px;
+    max-height: 50px;
     justify-content: left;
   }
+  .nav-link.active {
+    border-bottom: 3px solid var(blue);
+}
