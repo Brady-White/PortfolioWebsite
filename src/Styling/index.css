@@ -15,17 +15,13 @@ code {
 :root{
   --backgroundColor: white;
   --foregroundColor: #FFE8D1;
-  --primaryTextColor: black;
-  --secondaryTextColor: white;
-  --toggleBackground: #f1c40f;
-  --toggleForeground: #f39c12;
+  --primaryTextColor: #826251;
+  --secondaryTextColor: #568EA3;
 }
 
 [data-theme="dark"]{
   --backgroundColor: #1E1E24; 
-  --foregroundColor: #92140C;
+  --foregroundColor: #826251;
   --primaryTextColor: #FBFFF1;
-  --secondaryTextColor: black;
-  --toggleBackground: #f39c12;
-  --toggleForeground: #f1c40f;
+  --secondaryTextColor: #68C3D4;
 }

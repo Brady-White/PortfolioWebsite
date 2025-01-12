@@ -1,21 +1,83 @@
-
-
-.Welcome {
-
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
+.welcome-container {
+  position: relative;
+  left: 10%;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--primaryTextColor);
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  width: 50%;
+  z-index: 1;
 }
 
-.welcome-title {
-    font-size: 2.5em;
-    font-weight: 700;
-  }
+.greeting {
+  font-size: 3rem;
+  margin-bottom: 6px;
+}
+.name {
+  color: var(--secondaryTextColor);
+}
 
-  .headshot{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: blue;
-  }
+.profession {
+  margin-bottom: 6px;
+}
+
+.profession .typewriter {
+  display: inline-block;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 28ch;
+  animation: typing 2s steps(24), blink 0.5s step-end infinite alternate;
+  font-size: 1.5em;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 24ch; }
+}
+
+@keyframes blink {
+  from { border-color: transparent; }
+  to { border-color: white; }
+}
+
+.description {
+  font-size: 1rem;
+  margin-top: 10px; /* Adjust the margin as needed */
+  max-width: 100%; /* Ensure it doesn't exceed the container width */
+  width: 100%; /* Make it take the full width of the container */
+  word-wrap: break-word; /* Ensure long words break to the next line */
+}
+
+/* Headshot styling */
+.headshot-container {
+  position: absolute;
+  top: 40%; /* Adjusted to position the headshot closer to the top */
+  right: -400px; /* Adjust to position the headshot to the right of the text */
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 350px;
+  background-color: var(--secondaryTextColor);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 20px var(--secondaryTextColor);
+}
+
+.headshot-container:hover {
+  transform: scale(1.1) translateY(-50%);
+ 
+}
+
+.headshot {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}

@@ -10,9 +10,10 @@ import Project2 from './Project2';
 import About from './About';
 import { Toggle } from '../Components/Tools/toggle';
 import Sidebar from '../Components/Tools/SideBar';
+import useLocalStorage from 'use-local-storage';
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useLocalStorage("isDark",false);
 
   return (
    
