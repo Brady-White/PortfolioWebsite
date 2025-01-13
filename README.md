@@ -1,4 +1,3 @@
-```markdown
 # Portfolio Website
 
 Welcome to the source code repository for my portfolio website! This website serves as a showcase of my skills, projects, and experience as a developer.
